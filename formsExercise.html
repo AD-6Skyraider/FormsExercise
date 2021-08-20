@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="customer experience survey" />
+    <title>Survey</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Customer Experience Survey</legend>
+      <form>
+        <div>
+          <label for="sn">Store Number</label>
+          <select id="sn">
+            <option hidden>Select A Store</option>
+            <option value="3109">3109</option>
+            <option value="2421">2421</option>
+            <option value="5357">5357</option>
+          </select>
+        </div>
+
+        <div>
+          <fieldset>
+            <legend>When You Visited</legend>
+            <label for="date">Date Visited</label>
+            <input type="date" id="date" min="2021-01-01" max="2021-12-31" />
+            <br />
+            <label for="time">Time</label>
+            <input type="time" id="time" />
+          </fieldset>
+        </div>
+
+        <div>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" placeholder="Name" />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Email" />
+        </div>
+
+        <div>
+          <fieldset>
+            <legend>Gender</legend>
+            <input type="radio" name="gender" id="male" />
+            <label for="male">Male</label>
+            <br />
+            <input type="radio" name="gender" id="female" checked />
+            <label for="female">Female</label>
+          </fieldset>
+        </div>
+
+        <div>
+            <label for="experience">Tell us about your experience:</label>
+            <br>
+            <textarea name="" id="experience" cols="26" rows="3"></textarea>
+            <br>
+            <label for="visited">Times visited in the last month:</label>
+            <br>
+            <input type="number" id="visited" min="1" max="30">
+            <br>
+            <input type="radio" id="contact" required>
+            <label for="contact">Please check the box if you would be willing to be contacted about your experience:</label>
+            <br>
+            <label for="pw">Password:</label>
+            <input type="password" name="password" id="pw" pattern=".{5,10}" title="Please enter a password that is 5 to 10 characters in length" required>
+        </div>
+        <input type="reset"/>
+        <input type="submit"/>
+      </form>
+    </fieldset>
+  </body>
+</html>
